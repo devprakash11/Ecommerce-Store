@@ -1,0 +1,1 @@
+export const navigation=[{label:"Shop",href:"/products"},{label:"Collections",href:"/collections"},{label:"Stories",href:"/stories"},{label:"About",href:"/about"}];
