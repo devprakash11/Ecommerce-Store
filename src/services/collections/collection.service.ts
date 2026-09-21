@@ -1,0 +1,1 @@
+import {products} from "@/data/products";export async function getCollection(slug:string){return products.filter(p=>p.collection.toLowerCase()===slug||p.category.toLowerCase()===slug)}
