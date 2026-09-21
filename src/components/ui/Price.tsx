@@ -1,0 +1,1 @@
+import {formatCurrency} from "@/lib/utils/format-currency";export function Price({value,compareAt}:{value:number;compareAt?:number}){return <div className="flex gap-2"><span className="font-semibold">{formatCurrency(value)}</span>{compareAt&&<span className="text-sm text-[var(--muted)] line-through">{formatCurrency(compareAt)}</span>}</div>}
