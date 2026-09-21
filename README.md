@@ -34,7 +34,7 @@ Ecommerce-Store/
 │   ├── SECURITY.md
 │   ├── DECISIONS.md
 │   └── MEMORY.md
-├── .cursor/
+├── .antigravity/
 │   └── rules/
 │       ├── general.mdc
 │       ├── frontend.mdc
@@ -70,7 +70,7 @@ Ecommerce-Store/
 - `TASKS.md` breaks implementation into small, testable units.
 - `docs/TEST_PLAN.md` defines what working means.
 - `docs/SECURITY.md` defines production security requirements.
-- `.cursor/rules/` provides AI implementation constraints.
+- `.antigravity/rules/` provides AI implementation constraints.
 
 ## Getting started
 
