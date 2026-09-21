@@ -1,0 +1,19 @@
+---
+description: Frontend rules for Next.js and Tailwind
+globs:
+  - "src/**/*.tsx"
+  - "src/**/*.ts"
+  - "src/**/*.css"
+---
+
+# Frontend Rules
+
+- Use Next.js App Router conventions.
+- Prefer Server Components.
+- Add "use client" only when browser interactivity or client state requires it.
+- Follow `docs/DESIGN.md`.
+- Use Tailwind design tokens rather than arbitrary visual values when a token exists.
+- Keep components accessible and keyboard usable.
+- Use optimized image rendering.
+- Keep product grids visually consistent.
+- Do not introduce dashboard-style rounded-card patterns into the storefront.
