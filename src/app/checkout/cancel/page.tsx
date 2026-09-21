@@ -1,0 +1,1 @@
+import Link from "next/link";export default function Cancel(){return <div className="container-site py-32"><p className="eyebrow">Checkout</p><h1 className="display mt-5 text-7xl">PAYMENT<br/>CANCELLED.</h1><Link href="/cart" className="mt-8 inline-block border-b border-black pb-2 text-xs font-bold uppercase tracking-[.15em]">Back to cart</Link></div>}
