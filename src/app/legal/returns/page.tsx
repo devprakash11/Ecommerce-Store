@@ -1,0 +1,1 @@
+import {Container} from "@/components/ui/Container";export default function Returns(){return <Container className="py-20"><p className="eyebrow">Legal</p><h1 className="display mt-5 text-7xl">RETURNS.</h1><p className="mt-10 max-w-2xl leading-8 text-[var(--muted)]">Unused products in original condition may be eligible for return under the final published policy.</p></Container>
