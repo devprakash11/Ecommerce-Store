@@ -1,0 +1,1 @@
+.container-site{width:min(calc(100% - 32px),var(--max));margin-inline:auto}.border-line{border-color:var(--line)}@media(max-width:767px){.container-site{width:min(calc(100% - 28px),var(--max))}}
