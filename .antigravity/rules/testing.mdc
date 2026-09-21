@@ -1,0 +1,16 @@
+---
+description: Testing rules for the Langkah storefront
+globs:
+  - "tests/**/*"
+  - "**/*.spec.ts"
+  - "**/*.test.ts"
+---
+
+# Testing Rules
+
+- Follow `docs/TEST_PLAN.md`.
+- Test critical user journeys rather than implementation details.
+- Cover authentication, catalog discovery, cart behavior, authorization, and responsive layouts.
+- Keep test data deterministic.
+- Avoid tests dependent on production data.
+- Run Playwright tests before marking critical commerce tasks complete.
