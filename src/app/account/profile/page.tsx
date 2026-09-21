@@ -1,0 +1,1 @@
+import {Container} from "@/components/ui/Container";export default function Profile(){return <Container className="py-20"><p className="eyebrow">Account / Profile</p><h1 className="display mt-5 text-7xl">PROFILE.</h1></Container>
