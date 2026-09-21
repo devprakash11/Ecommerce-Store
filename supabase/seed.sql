@@ -1,0 +1,1 @@
+insert into public.products(slug,name,category,price,description,image) values('aero-runner-01','Aero Runner 01','Running',8999,'A lightweight daily runner.','/images/products/aero-runner.svg') on conflict(slug) do nothing;
