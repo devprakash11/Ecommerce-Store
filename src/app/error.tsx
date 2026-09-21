@@ -1,0 +1,1 @@
+"use client";export default function Error({reset}:{reset:()=>void}){return <div className="container-site py-32"><p className="eyebrow">Error</p><h1 className="display mt-5 text-7xl">TRY AGAIN.</h1><button onClick={reset} className="mt-8 bg-black px-5 py-3 text-xs font-bold uppercase tracking-[.15em] text-white">Retry</button></div>}
