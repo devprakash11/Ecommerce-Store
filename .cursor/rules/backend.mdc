@@ -1,0 +1,17 @@
+---
+description: Server, Supabase, and data-access rules
+globs:
+  - "src/services/**/*.ts"
+  - "src/lib/**/*.ts"
+  - "src/app/api/**/*.ts"
+---
+
+# Backend Rules
+
+- Keep privileged Supabase operations server-side.
+- Never expose Supabase service-role credentials to client code.
+- Put database access in `src/services`.
+- Validate input before persistence.
+- Enforce authorization server-side.
+- Treat database constraints and RLS as part of the security boundary.
+- Keep external integrations behind service boundaries.
