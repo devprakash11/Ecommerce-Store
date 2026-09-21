@@ -1,0 +1,1 @@
+import {Container} from "@/components/ui/Container";export default function Orders(){return <Container className="py-20"><p className="eyebrow">Account / Orders</p><h1 className="display mt-5 text-7xl">ORDERS.</h1><p className="mt-8 text-sm text-[var(--muted)]">Connect the authenticated Supabase order service to load customer orders.</p></Container>}
