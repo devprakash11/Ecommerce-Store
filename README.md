@@ -1,104 +1,41 @@
 # Langkah. E-commerce Store
 
-A premium, editorial sneaker e-commerce experience inspired by the provided visual reference. The product direction combines fashion editorial storytelling with a focused shopping flow.
+A professional editorial sneaker e-commerce storefront built from the supplied visual direction.
 
-## Product direction
+## Stack
+Next.js App Router, TypeScript, Tailwind CSS v4, Supabase PostgreSQL/Auth, Zustand, Playwright, Vercel.
 
-**Brand:** Langkah.  
-**Category:** Performance and lifestyle sneakers.  
-**Primary experience:** Discover sneakers, explore collections, read editorial content, and move into a simple product-to-cart journey.
-
-The reference uses an off-white editorial canvas, oversized typography, large product photography, asymmetric compositions, compact product grids, promotional banners, editorial cards, FAQ content, newsletter capture, and a dark footer.
-
-## Recommended stack
-
-- **AI IDE:** Antigravity
-- **Frontend:** Next.js App Router
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS
-- **Database:** PostgreSQL via Supabase
-- **Authentication:** Supabase Auth
-- **Version control:** Git + GitHub
-- **Testing:** Playwright
-- **Deployment:** Vercel
-
-## Repository structure
-
-```text
-Ecommerce-Store/
-├── docs/
-│   ├── PRD.md
-│   ├── ARCHITECTURE.md
-│   ├── DESIGN.md
-│   ├── TEST_PLAN.md
-│   ├── SECURITY.md
-│   ├── DECISIONS.md
-│   └── MEMORY.md
-├── .antigravity/
-│   └── rules/
-│       ├── general.mdc
-│       ├── frontend.mdc
-│       ├── backend.mdc
-│       └── testing.mdc
-├── src/
-│   ├── app/
-│   ├── components/
-│   ├── features/
-│   ├── services/
-│   ├── lib/
-│   ├── types/
-│   └── utils/
-├── tests/
-│   ├── unit/
-│   ├── integration/
-│   └── e2e/
-├── public/
-├── .env.example
-├── .gitignore
-├── README.md
-├── TASKS.md
-└── package.json
-```
-
-## Documentation contract
-
-- `docs/PRD.md` defines **what** is being built and **why**.
-- `docs/ARCHITECTURE.md` defines **how** the application is structured.
-- `docs/DESIGN.md` defines the visual and interaction system.
-- `docs/DECISIONS.md` records permanent technical decisions.
-- `docs/MEMORY.md` records the current implementation state.
-- `TASKS.md` breaks implementation into small, testable units.
-- `docs/TEST_PLAN.md` defines what working means.
-- `docs/SECURITY.md` defines production security requirements.
-- `.antigravity/rules/` provides AI implementation constraints.
-
-## Getting started
-
-The repository is intentionally scaffolded around the documentation-first workflow. After the project dependencies are installed:
-
+## Run
 ```bash
 npm install
+cp .env.example .env.local
 npm run dev
 ```
 
-Create `.env.local` from `.env.example` before enabling Supabase-backed functionality.
-
-## Development principle
-
-Build in small vertical slices:
-
-```text
-TASK
-  ↓
-Implement
-  ↓
-Test
-  ↓
-Review
-  ↓
-Mark complete
-  ↓
-Next TASK
+## Architecture
+```
+src/app          -> routes and page composition
+src/components   -> reusable UI and commerce presentation
+src/features     -> domain/client behavior
+src/services     -> data-access boundary
+src/lib          -> Supabase, config and shared infrastructure
+src/types        -> shared TypeScript contracts
+src/data         -> initial typed demo catalog/content
+src/styles       -> design tokens and global styling
+supabase         -> migrations and seed data
+tests            -> Playwright coverage
 ```
 
-Do not treat the entire storefront as one implementation prompt.
+The first storefront slice works without Supabase by using typed local catalog data. The service layer is the replacement point for PostgreSQL-backed catalog queries.
+
+## Production steps
+1. Add Supabase environment variables.
+2. Apply `supabase/migrations/0001_initial_schema.sql`.
+3. Replace demo auth forms with Supabase Auth actions.
+4. Replace checkout scaffold with a server-side payment integration and verified webhooks.
+5. Move product/editorial media into production storage.
+6. Publish final legal, shipping and returns policies.
+7. Run `npm run typecheck`, `npm run lint` and `npm run test:e2e`.
+8. Deploy to Vercel.
+
+Never commit `.env.local` or service-role credentials.
