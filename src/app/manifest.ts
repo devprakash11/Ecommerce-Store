@@ -1,0 +1,1 @@
+import type {MetadataRoute} from "next";export default function manifest():MetadataRoute.Manifest{return{name:"Langkah.",short_name:"Langkah.",description:"Editorial sneaker commerce.",start_url:"/",display:"standalone",background_color:"#f3f0ea",theme_color:"#f3f0ea"}}
