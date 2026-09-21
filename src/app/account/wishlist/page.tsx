@@ -1,0 +1,1 @@
+import {Container} from "@/components/ui/Container";export default function Wishlist(){return <Container className="py-20"><p className="eyebrow">Account / Wishlist</p><h1 className="display mt-5 text-7xl">WISHLIST.</h1></Container>}
