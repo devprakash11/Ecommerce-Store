@@ -1,0 +1,1 @@
+import{test,expect}from"@playwright/test";test("homepage and catalog work",async({page})=>{await page.goto("/");await expect(page.getByText("MOVE",{exact:true}).first()).toBeVisible();await page.getByRole("link",{name:"Shop"}).click();await expect(page).toHaveURL(/products/);await expect(page.getByText("ALL",{exact:true}).first()).toBeVisible()})
