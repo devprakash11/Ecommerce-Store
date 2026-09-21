@@ -1,0 +1,1 @@
+export type CatalogFilters={q?:string;category?:string;sort?:"price-asc"|"price-desc"|"newest"}
