@@ -1,0 +1,1 @@
+import {products} from "@/data/products";export async function listProducts(){return products}export async function getProductBySlug(slug:string){return products.find(p=>p.slug===slug)??null}
