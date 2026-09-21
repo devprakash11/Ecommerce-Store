@@ -1,0 +1,1 @@
+import {Container} from "@/components/ui/Container";export default function Addresses(){return <Container className="py-20"><p className="eyebrow">Account / Addresses</p><h1 className="display mt-5 text-7xl">ADDRESSES.</h1></Container>}
