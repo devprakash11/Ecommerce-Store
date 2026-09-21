@@ -1,0 +1,1 @@
+export function AnnouncementBar(){return <div className="bg-[var(--dark)] py-2 text-center text-[10px] font-bold uppercase tracking-[.18em] text-white">Free shipping on orders over ₹7,500 · Easy returns</div>}
